@@ -17,7 +17,7 @@ function setup() {
 
 function draw() {
   background("blue"); 
-  if(wall.x-bullet.x <(bullet.width+wall.width)/2)
+  if(bullet.collide(wall))
   {damage=0.5*speed*speed*weight/wall.width*wall.width*wall.width;
   bullet.velocityX=0;
   if (damage >10){
